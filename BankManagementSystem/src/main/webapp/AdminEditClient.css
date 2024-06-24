@@ -1,0 +1,329 @@
+@charset "UTF-8";
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-areas: "img img img img"
+                        "sb con con con"
+                        "sb con con con";
+    height: 100vh;
+    /* background-color: #fefaf53e; */
+}
+
+.image-block{
+    grid-area: img;
+    height: 25vh;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.image-block img{
+    height: 30vh;
+    width: 99.7%;
+    object-fit: cover;
+    object-position: 0 -150px;
+    position: fixed;
+    top: 0;
+}
+
+.sidebar{
+    grid-area: sb;
+    min-height: 75vh;
+    width: 26vw;
+    display: flex;
+    flex-direction: column;
+    /* padding: 3rem; */
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    border-right: 0.5px solid rgb(221, 214, 214);
+    /* border:  1px solid black; */
+    background-color: #fcfaf7;
+    z-index: 1;
+}
+
+.bank-name{
+    display: grid;
+    height: 7vh;
+    /* border: 1px solid blue; */
+}
+
+.bank-name h2{
+    cursor: pointer;
+    /* border: 1px solid black; */
+    width:5rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.sidecontent{
+    height: 35vh;
+    /* border: 1px solid brown; */
+    width: 100%;
+}
+
+.sidecontent ol{
+    height: 100%;
+    width: 100%;
+}
+
+.sidecontent ol li{
+    list-style-type: none;
+    height: 17%;
+    width: 100%;
+    padding-left: 1rem;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.sidecontent ol li:hover{
+    background-color: #e8eef2;
+    font-weight: 600;
+}
+
+.content-block{
+    grid-area: con;
+    height: auto;
+    width: 73vw;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcfaf7;
+    /* overflow: hidden; */
+    z-index: 1;
+}
+
+.content-block-head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-block-head h1{
+    margin-top: 2rem;
+}
+
+.content-block-head p{
+    margin-top: 1rem;
+}
+
+.client-detail-block{
+    min-height: 60vh;
+    width: 100%;
+    margin-top: 1rem;
+    /* border: 1px solid red; */
+    padding: 1rem;
+}
+
+.client-detail-block table{
+    width: 95%;
+}
+
+.client-detail-block table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.client-detail-block th{
+    width: 30%;
+    border-right: 1px solid black;
+}
+
+.client-detail-block tr{
+    height: 5vh;
+    border-bottom: 1px solid black;
+}
+
+.client-detail-block td{
+    display: grid;
+    place-content: center;
+}
+
+.client-detail-block td textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    /* outline: 0.5px solid red; */
+    padding: 10px;
+    resize: none;
+    
+}
+
+.client-detail-block td select{
+    width: 50vw;
+    border: none;
+    height: 6vh;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.client-detail-block td textarea:focus{
+    z-index: 1;
+    outline: 2px solid black;
+}
+
+.history{
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+    /* border: 1px solid red; */
+}
+
+.history a{
+    border: none;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: -370px;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.history a:hover{
+    color: red;
+    font-weight: bold;
+}
+
+.actionButton{
+    display: flex;
+    justify-content: end;
+    /* align-items: center; */
+    width: 95%;
+    /* border: 1px solid red; */
+    padding: 1rem;
+}
+
+.beforeEdit , .afterEdit{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    height: 4vh;
+    width: 100%;
+}
+
+.beforeEdit a , .beforeEdit p , .afterEdit button , .afterEdit p{
+    display: grid;
+    place-content: center;
+    height: 35px;
+    width: 95px;
+    /* border: 1px solid blue; */
+    border-radius: 10px;
+    text-decoration: none ;
+}
+
+.beforeEdit a , .afterEdit button{
+    background-color: rgba(101, 101, 240, 0.884);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.beforeEdit a:hover , .afterEdit button:hover{
+    font-weight: 700;
+    background-color: rgb(63, 63, 243);
+}
+
+.beforeEdit p , .afterEdit p{
+    background-color: rgb(252, 106, 106);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.beforeEdit p:hover , .afterEdit p:hover{
+    font-weight: bold;
+    background-color: rgb(255, 56, 56);
+}
+
+.hideButton{
+    display: none;
+}
+
+.outer-logout{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100vw;
+    /* border: 1px solid red; */
+    z-index: 2;
+}
+
+.logout-block{
+	position : relative;
+	top : 60px;
+    height: 35vh;
+    width: 400px;
+    /* border: 1px solid #617996; */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #a89e7a74;
+    gap: 1.5rem;
+    z-index: 5;
+}
+
+.logout-question{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #47626a;
+}
+
+.logout-button{
+    display: flex;
+    width: 250px ;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logout-button button{
+    height: 4vh;
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    background-color: #cde2ef;
+}
+
+.logout-button button:hover{
+    background-color: #79acbc;
+    color: white;
+}
+
+.hide-logout{
+    display: none;
+}
+
+.show{
+    background-color: #d4dcea;
+    filter: blur(5px);
+}

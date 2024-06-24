@@ -1,0 +1,226 @@
+@charset "UTF-8";
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-areas: "img img img img"
+                        "sb con con con"
+                        "sb con con con";
+    height: 100vh;
+    /* background-color: #fefaf53e; */
+}
+
+.image-block{
+    grid-area: img;
+    height: 25vh;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.image-block img{
+    height: 30vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 -150px ;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+.sidebar{
+    grid-area: sb;
+    min-height: 75vh;
+    width: 27vw;
+    display: flex;
+    flex-direction: column;
+    /* padding: 3rem; */
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    border-right: 0.5px solid rgb(221, 214, 214);
+    /* border:  1px solid black; */
+    background-color: #fcfaf7;
+}
+
+.bank-name{
+    display: grid;
+    height: 7vh;
+    /* border: 1px solid blue; */
+}
+
+.bank-name h2{
+    cursor: pointer;
+    /* border: 1px solid black; */
+    width:5rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.sidecontent{
+    height: 35vh;
+    /* border: 1px solid brown; */
+    width: 100%;
+}
+
+.sidecontent ol{
+    height: 100%;
+    width: 100%;
+}
+
+.sidecontent ol li{
+    list-style-type: none;
+    height: 17%;
+    width: 100%;
+    padding-left: 1rem;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.sidecontent ol li:hover{
+    background-color: #e8eef2;
+    font-weight: 600;
+}
+
+.highlight{
+    background-color: #e8eef2;
+    font-weight: 600;
+}
+
+.content-block{
+    grid-area: con;
+    height: auto;
+    width: 73vw;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcfaf7;
+}
+
+.content-block-head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-block-head h1{
+    margin-top: 2rem;
+}
+
+.content-block-head p{
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.client-detail-block{
+    min-height: 55vh;
+    width: 100%;
+    margin-top: 1rem;
+    /* border: 1px solid red; */
+    padding: 1rem
+}
+
+.client-detail-block table{
+    width: 100%;
+}
+
+.client-detail-block table,th,tr,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+.client-detail-block td{
+    text-align: center;
+}
+
+.client-detail-block tr{
+	height : 5vh;
+}
+
+.usercell button , .statementcell button{
+    border: none;
+    background-color: white;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.outer-logout{
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    /* border: 1px solid red; */
+    z-index: 1;
+}
+
+.logout-block{
+    height: 35vh;
+    width: 400px;
+    /* border: 1px solid #617996; */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #a89e7a74;
+    gap: 1.5rem;
+    z-index: 5;
+}
+
+.logout-question{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #47626a;
+}
+
+.logout-button{
+    display: flex;
+    width: 250px ;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logout-button button{
+    height: 4vh;
+    width: 100px;
+    border: none;
+    border-radius: 20px;
+    background-color: #cde2ef;
+}
+
+.logout-button button:hover{
+    background-color: #79acbc;
+    color: white;
+}
+
+.hide-logout{
+    display: none;
+}
+
+.show{
+    background-color: #d4dcea;
+    filter: blur(5px);
+}

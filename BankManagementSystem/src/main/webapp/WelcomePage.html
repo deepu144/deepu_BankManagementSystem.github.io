@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="WelcomePage.css">
+    <script src="WelcomePage.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header>
+        <div class="Bank-icon-section">
+            <div class="icon">
+                <img src="/BankManagementSystem/images/finance-logo-and-symbols-vector-concept-removebg-preview.png" alt="FinanceLogo">
+            </div>
+            <div class="bank-name">
+                <h3>Finance</h3>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="nav-div">
+                <p>Home</p>
+                <p>Explore</p>
+                <p>Market</p>
+                <p>Profile</p>
+            </div>
+            <div class="menu" id="menu">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </div>
+            <div class="dropdown hideDrop" id="dropdown">
+                <div class="inner-drop">
+                    <div>Home</div>
+                    <div>Explore</div>
+                    <div>Market</div>
+                    <div>Profile</div>
+                </div>
+            </div>
+            <div class="sign-in">
+               <form action="signin" method="get">
+                    <button value="signIn">Sign-In</button>
+               </form>
+            </div>
+        </div>
+        <hr class="line">
+    </header>
+    <div class="bgcolor">
+        
+    </div>
+    <section class="body-section">
+        <div class="image">
+            <img src="/BankManagementSystem/images/bank-building-bank-in-the-city-the-car-is-at-the-bank-money-in-the-bank-illustration-free-vector.jpg" alt="bank">
+        </div>
+        <div class="sign-up-section">
+            <h3>New to Finance ?</h3>
+            <div class="sign-up">
+                <form action="signup" method="get">
+                    <button value="signup">Create an Account</button>
+                </form>
+            </div>
+            <p>By Signing in , You are agree to</p>
+        </div>
+    </section>
+    
+    <div class="sign-in-information">
+        <div class="agree">
+            <p>Terms and Service</p>
+            <p>Privacy Policy</p>
+        </div>
+    </div>
+    <footer class="Copyright">
+        <div class="fillgap"></div>
+        <p>Copyright&nbsp;&copy;&nbsp;2004 MyBank</p>
+    </footer>
+</body>
+</html>

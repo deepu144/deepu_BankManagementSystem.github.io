@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+body{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+main{
+    height: auto;
+    width: 300px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main img{
+    height: 300px;
+}
+
+main p{
+    text-align: center;
+    font-weight: bold;
+    width: 450px;
+}
+
+main button span{
+    font-size: 2px;
+    margin-right: 5px;
+}
+
+main button{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    background-color: darkcyan;
+    cursor: pointer;
+    color: white;
+}
+
+main button:hover{
+    scale: 1.05;
+}
